@@ -22,8 +22,10 @@ Country IN ('Brazil');
 INSERT INTO customers (CustomerName, ContactName, Address, City, Postalcode, Country)
 VALUES ('The Shire','Bilbo Baggins','1 Hobbit-Hole','Bag End','111', 'Middle Earth')
 
-
 -- Update Bilbo Baggins record so that the postal code changes to "11122"
+UPDATE customers 
+    SET postalCode ='11122'
+WHERE contactName = 'Bilbo Baggins';
 
 -- (Stretch) Find a query to discover how many different cities are stored in the Customers table. Repeats should not be double counted
 
